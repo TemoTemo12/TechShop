@@ -1,0 +1,743 @@
+/* 
+/* css reseting */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* body tag styling */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* parent div (main screen) */
+
+
+
+
+
+
+.box{
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background: #666;
+    border-radius: 50px;
+}
+
+/* main screen :before | without it screen will be gray */
+
+.box::before{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #000;
+    border-radius: 48px;
+}
+
+/*  */
+
+.inner{
+    position: absolute;
+    inset: 3px;
+    background: url(https://i.pinimg.com/736x/27/03/78/27037805f558fa783b085d8b5740e7bb.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 48px;
+    border: 10px solid #000;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+
+.box:hover.inner{
+    opacity: 1;
+}
+
+
+
+.btn{
+    position: absolute;
+    top: 110px;
+    left: -2px;
+    width: 3px;
+    height: 26px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: radial-gradient(#ccc, #666, #222);
+    z-index: 10;
+}
+.btn.btn2{
+    top: 160px;
+    height: 40px;
+    cursor: pointer;
+}
+.btn.btn3{
+    top: 220px;
+    height: 40px;
+    cursor: pointer;
+}
+.rightSideBtn{
+    position: absolute;
+    top: 170px;
+    right: -2px;
+    width: 3px;
+    height: 70px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: radial-gradient(#ccc, #666, #222);
+    z-index: 10;
+    cursor: pointer;
+}
+.island_popup{
+    position: absolute;
+    top: 10px;
+    width: 90px;
+    height: 25px;
+    background: #000;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.island_popup:hover{
+    width: 200px;
+    height: 25px;
+    border: solid wh;
+}
+
+.island_popup:active{
+    width: 240px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    line-height: 25px;
+}
+.content p{
+    color: #fff;
+    font-size: 0.6em;
+    cursor: default;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+} 
+.action{
+    position: relative;
+    top: 5px;
+    color: #fff;
+    display: flex;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.island_popup.active {
+    top: 12px;
+}
+
+
+.navbar-main{
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 6px;  
+    border-radius: 50px;
+    margin-top: 575px;
+    margin-left: 100px;
+    transition: transform 0.3s ease; /* Smooth transition for movement */
+}
+
+
+
+  
+  .navbar-main:hover {
+    transform: translateY(-10px); /* Move up by 10px on hover */
+  }
+  
+
+
+.Lock{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 96px;
+    color: white;
+    font-family: fantasy;
+    letter-spacing: 5px;
+    font-size: 50px;
+}
+
+.camera{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 65px;
+    background: #bdbdbd;
+    border-radius: 20px;
+    margin-top: -529px;
+    border: solid white 2px;
+}
+
+
+
+.inner, .camera, .navbar-main {
+    transition: background-color 0.5s ease, border-color 0.5s ease; /* Smooth transition */
+}
+
+
+/* Initially hide the volume indicator */
+.volume-indicator {
+    position: absolute;
+    color: white;
+    margin-left: 95px;
+    margin-top: 300px;
+    font-size: 18px;
+    font-family: monospace;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade in/out */
+}
+
+.show {
+    opacity: 1; /* Show the indicator */
+}
+
+
+.animate-up {
+    animation: volumeUp 0.5s ease;
+}
+
+.animate-down {
+    animation: volumeDown 0.5s ease;
+}
+
+@keyframes volumeUp {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes volumeDown {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
+
+
+
+.print{
+    border-radius: 100px;
+    position: absolute;
+    max-height: 50px;
+    margin-left: -173px;
+    margin-top: 170px;
+    transition:  0.3s ease;
+}
+
+.print:hover{
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+
+
+
+/* second screen */
+
+
+
+
+
+.safari{
+    border-radius: 70%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: -43px;
+    margin-top: 100px;
+}
+
+
+.imessage{
+    border-radius: 30%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: -170px;
+    margin-top: 200px;
+}
+
+.icall{
+    border-radius: 30%;
+    height: 50px;
+    position: absolute;
+    margin-left: -130px;
+    margin-top: 100px;
+}
+
+.camera1{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 98px;
+    background: #bdbdbd;
+    border-radius: 20px;
+    margin-top: -529px;
+    border: solid white 2px;
+}
+
+
+.gallery{
+    height: 50px;
+    position: absolute;
+    margin-left: -85px;
+    margin-top: -69px;
+}
+
+.clock-2{
+    color: white;
+    margin-top: -530px;
+    margin-left: -175px;
+    font-size: 21px;
+    position: absolute;
+}
+
+
+
+
+
+
+.battery {
+    width: 30px;
+    height: 20px; 
+    border: 3px solid #333; 
+    border-radius: 5px;
+    position: relative;
+    margin-top: -529px;
+    margin-left: -65px;
+}
+
+.battery:after {
+    content: "";
+    width: 4px;
+    height: 9px;
+    background-color: #333;
+    position: absolute;
+    right: -6px; 
+    top: 3px;
+    border-radius: 2px;
+}
+
+.battery-level {
+    width: 0;
+    height: 100%;
+    background-color: #ffeb3b;
+    border-radius: 3px;
+    animation: charging 10s infinite;
+}
+
+@keyframes charging {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+        background-color: #4caf50;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+
+.spotify{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -30px;
+}
+
+
+.youtube{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: -135px;
+    margin-top: -95px;
+}
+
+
+.appletv{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: -25px;
+    margin-top: 15px;
+}
+
+.note{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: -70px;
+    margin-top: 15px;
+}
+
+.appstore{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: -112px;
+    margin-top: 15px;
+}
+
+
+.camera2{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 15px;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+
+.setthings{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: -73px;
+}
+
+
+.calculator{
+    width: 50px;
+    height: 55px;
+    position: absolute;
+    border-radius: 10px;
+    margin-top: -25px;
+    margin-left: -112px;
+}
+
+
+/* search bar */
+
+.search-container {
+    margin-top: 280px;
+    margin-left: -225px;
+    backdrop-filter: blur(1px); /* Blur effect */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  }
+  
+
+  
+  .search-box input {
+    padding: 10px;
+    background: none;
+    width: 150px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  
+  .search-box .search-button {
+    padding: 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .search-box .search-button i {
+    font-size: 15px;
+  }
+  
+  .search-box input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* swipe to right screen
+
+  .swipe-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    margin-left: -170px;
+    margin-top: 200px;
+    border:solid #666 1px;
+    background: none; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+}
+
+
+
+.swipe-text {
+    margin-right: 10px;
+}
+
+.icon {
+    display: inline-block;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.swipe-button:hover .icon {
+    transform: translateX(10px);
+} */
+
+/* indicators */
+
+.indicator-1{
+    display: inline;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: none;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    margin-left: -130px;
+}
+
+.indicator-1:hover{
+    transition: 1s;
+    transform: scale(0.8);
+}
+
+
+.indicator-2{
+    display: inline;
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    background-color: #bdbdbd;
+    width: 15px;
+    height: 15px;
+    margin-left: -110px;
+    margin-top: 10px;
+}
+
+.indicator-2:hover{
+    transition: 1s;
+    transform: scale(0.8);
+}
+
+
+
+
+
+/* third screen  */
+
+
+.indicator-1-2{
+    display: inline;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    border: none;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    margin-left: -130px;
+}
+
+.indicator-1-2:hover{
+    transition: 1s;
+    transform: scale(0.8);
+}
+
+
+.indicator-2-3{
+    display: inline;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: none;
+    width: 15px;
+    height: 15px;
+    margin-left: -110px;
+    margin-top: 10px;
+}
+
+.indicator-2-3:hover{
+    transition: 1s;
+    transform: scale(0.8);
+}
+
+
+.indicator-parent{
+    margin-top: 330px;
+    margin-left: 8px;
+}
+
+/* calendar */
+
+.calendar {
+    margin-left: 650px;
+    margin-top: 100px;
+    position: fixed;
+    width: 180px; /* პატარა სიგანე */
+    height: 190px; /* უფრო პატარა სიმაღლე */
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    top: 50px; /* გადააადგილებულია ზედა ნაწილში */
+    left: 10px; /* მარცხნივ */
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px; /* პატარა padding */
+    background-color: #333;
+    color: #fff;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 12px; /* პატარა ღილაკები */
+    cursor: pointer;
+    padding: 2px; /* პატარა padding ღილაკებზე */
+    transition: color 0.3s;
+}
+
+.calendar-header button:hover {
+    color: #00adb5;
+}
+
+#month-year {
+    font-size: 12px; /* პატარა ტექსტი */
+    font-weight: bold;
+}
+
+.calendar-body {
+    padding: 5px; /* პატარა padding */
+}
+
+.day-names {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-bottom: 5px; /* პატარა დაშორება */
+    color: #333;
+    font-weight: bold;
+    font-size: 10px; /* პატარა ტექსტი */
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 2px; /* პატარა დაშორება */
+}
+
+.days-grid div {
+    padding: 5px; /* პატარა padding დღეებში */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 10px; /* პატარა ტექსტი */
+}
+
+.days-grid div:hover {
+    background-color: #00adb5;
+    color: white;
+}
+
+.days-grid .today {
+    background-color: #00adb5;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px; /* პატარა ჩარჩო დღევანდელი დღის გარშემო */
+}
+
+/* apps */
+
+.reminder{
+    position: absolute;
+    width: 50px;
+    border-radius: 20%;
+    margin-left: -40px;
+    margin-top: -235px;
+}
+
+.map{
+    position: absolute;
+    width: 50px;
+    border-radius: 30%;
+    margin-left: -40px;
+    margin-top: -170px;
+}
+
+.wallet{
+    width: 55px;
+    height: 50px;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: -41px;
+    margin-top: -100px;
+}
+
+.radio{
+    position: absolute;
+    width: 50px;
+    margin-left: -240px;
+    margin-top: -30px;
+}
+
+.snake-game{
+    position: absolute;
+    width: 50px;
+    margin-left: -160px;
+    margin-top: -30px;
+}
+
+
+
+
+
+.back-to-main{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 650px;
+    margin-left: -177px;
+}
